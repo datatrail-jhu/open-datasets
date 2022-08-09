@@ -1,6 +1,7 @@
-# Open Source Datasets and Databases to Practice Data Science with
+# Open Source Datasets and Databases for Practicing Data Science 
 
 This is a list of databases and datasets that are all freely available and great for practicing R data manipulation and analysis. 
+This guide also includes some basic tips for getting the data imported into R in the first place. 
 Before following any of these instructions, make sure you have the tidyverse installed by using this in R: 
 ```
 install.packages("tidyverse")
@@ -41,6 +42,16 @@ Then you can use that URL in a read_csv function like this:
 airline_safety <- readr::read_csv("https://raw.githubusercontent.com/fivethirtyeight/data/master/airline-safety/airline-safety.csv")
 ```
 
-## Databases 
+## Kaggle
 
+[Kaggle](https://www.kaggle.com/datasets) has a variety of datasets that are generally available as CSV.
+You'll have to make a login before you download, but you can use a Google login. 
 
+To download a dataset, you can browse them and then when you find one you like, you can download the CSV. It will download it in a zip file. Upload this to your RStudio server using the Upload button. 
+
+Then you will see a CSV included in that data file and you can use `readr::read_csv()`to read in the file. 
+
+For example, for the [Data Science Job Salaries dataset](https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries), you can click `Download` and then upload the resulting zip file. Then you can read in the file like: 
+```r
+readr::read_csv("ds_salaries.csv")
+```
