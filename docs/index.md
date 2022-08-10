@@ -1,6 +1,6 @@
 ---
 title: " Open Source Datasets and Databases for Practicing Data Science "
-date: "`r format(Sys.time(), '%B, %Y')`"
+date: "August, 2022"
 site: bookdown::bookdown_site
 documentclass: book
 biblio-style: apalike
