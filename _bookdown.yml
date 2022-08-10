@@ -1,7 +1,7 @@
 book_filename: "DataTrail"
 chapter_name: "Chapter "
 rmd_files: ["index.Rmd",
-            "01-intro.Rmd"]
+            "datasets.Rmd"]
 new_session: yes
 bibliography: [book.bib]
 delete_merged_file: true
