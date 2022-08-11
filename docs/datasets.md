@@ -1,0 +1,53 @@
+
+
+
+# Datasets
+
+## dslabs
+
+[dslabs](https://cran.r-project.org/web/packages/dslabs/index.html)
+
+There's 26 datasets already set up in R for you.
+To use the datasets in this package you need to do the following kind of steps:
+```r
+# Install the package
+install.packages("dslabs")
+library(dslabs)
+```
+
+For the dataset `admissions` for example, you first need to prep it with `data()` function and then you can call it as an object.
+```r
+data(admissions)
+admissions
+```
+
+## FiveThiryEight Data
+
+There's a variety of datasets available as CSVs.
+
+[Go to the GitHub](https://github.com/fivethirtyeight/data)
+When you find the dataset you are interested in, click on that folder and then click on the data file you are interested in.
+Then click `Raw`.
+Copy and paste the URL that that brings you to.
+For example, for the `airline-safety` dataset, the URL would look like this:
+```
+https://raw.githubusercontent.com/fivethirtyeight/data/master/airline-safety/airline-safety.csv
+```
+Then you can use that URL in a read_csv function like this:
+```r
+airline_safety <- readr::read_csv("https://raw.githubusercontent.com/fivethirtyeight/data/master/airline-safety/airline-safety.csv")
+```
+
+## Kaggle
+
+[Kaggle](https://www.kaggle.com/datasets) has a variety of datasets that are generally available as CSV.
+You'll have to make a login before you download, but you can use a Google login.
+
+To download a dataset, you can browse them and then when you find one you like, you can download the CSV. It will download it in a zip file. Upload this to your RStudio server using the Upload button.
+
+Then you will see a CSV included in that data file and you can use `readr::read_csv()`to read in the file.
+
+For example, for the [Data Science Job Salaries dataset](https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries), you can click `Download` and then upload the resulting zip file. Then you can read in the file like:
+```r
+readr::read_csv("ds_salaries.csv")
+```
