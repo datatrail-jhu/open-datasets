@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Open Source Datasets and Databases for Practicing Data Science</title>
+  <title>Chapter 2 Datasets | Open Source Datasets and Databases for Practicing Data Science</title>
   <meta name="description" content="Description about Course/Book." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Open Source Datasets and Databases for Practicing Data Science" />
+  <meta property="og:title" content="Chapter 2 Datasets | Open Source Datasets and Databases for Practicing Data Science" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Open Source Datasets and Databases for Practicing Data Science" />
+  <meta name="twitter:title" content="Chapter 2 Datasets | Open Source Datasets and Databases for Practicing Data Science" />
   
   <meta name="twitter:description" content="Description about Course/Book." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/DataTrail_favicon.ico" type="image/x-icon" />
+<link rel="prev" href="index.html"/>
 
-<link rel="next" href="datasets.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -176,17 +176,42 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="hero-image-container"> 
   <img class= "hero-image" src="assets/DataTrail.jpg">
 </div>
-<div id="header">
-<h1 class="title">Open Source Datasets and Databases for Practicing Data Science</h1>
-<p class="date"><em>September, 2023</em></p>
+<div id="datasets" class="section level1" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Datasets</h1>
+<div id="dslabs" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> dslabs</h2>
+<p><a href="https://cran.r-project.org/web/packages/dslabs/index.html">dslabs</a></p>
+<p>There’s 26 datasets already set up in R for you.
+To use the datasets in this package you need to do the following kind of steps:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="datasets.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install the package</span></span>
+<span id="cb2-2"><a href="datasets.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;dslabs&quot;</span>)</span>
+<span id="cb2-3"><a href="datasets.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dslabs)</span></code></pre></div>
+<p>For the dataset <code>admissions</code> for example, you first need to prep it with <code>data()</code> function and then you can call it as an object.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="datasets.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(admissions)</span>
+<span id="cb3-2"><a href="datasets.html#cb3-2" aria-hidden="true" tabindex="-1"></a>admissions</span></code></pre></div>
 </div>
-<div id="open-source-datasets-and-databases-for-practicing-data-science" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Open Source Datasets and Databases for Practicing Data Science</h1>
-<p>This is a list of databases and datasets that are all freely available and great for practicing R data manipulation and analysis.
-This guide also includes some basic tips for getting the data imported into R in the first place.
-Before following any of these instructions, make sure you have the tidyverse installed by using this in R:</p>
-<pre><code>install.packages(&quot;tidyverse&quot;)</code></pre>
+<div id="fivethiryeight-data" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> FiveThiryEight Data</h2>
+<p>There’s a variety of datasets available as CSVs.</p>
+<p><a href="https://github.com/fivethirtyeight/data">Go to the GitHub</a>
+When you find the dataset you are interested in, click on that folder and then click on the data file you are interested in.
+Then click <code>Raw</code>.
+Copy and paste the URL that that brings you to.
+For example, for the <code>airline-safety</code> dataset, the URL would look like this:</p>
+<pre><code>https://raw.githubusercontent.com/fivethirtyeight/data/master/airline-safety/airline-safety.csv</code></pre>
+<p>Then you can use that URL in a read_csv function like this:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="datasets.html#cb5-1" aria-hidden="true" tabindex="-1"></a>airline_safety <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/fivethirtyeight/data/master/airline-safety/airline-safety.csv&quot;</span>)</span></code></pre></div>
+</div>
+<div id="kaggle" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Kaggle</h2>
+<p><a href="https://www.kaggle.com/datasets">Kaggle</a> has a variety of datasets that are generally available as CSV.
+You’ll have to make a login before you download, but you can use a Google login.</p>
+<p>To download a dataset, you can browse them and then when you find one you like, you can download the CSV. It will download it in a zip file. Upload this to your RStudio server using the Upload button.</p>
+<p>Then you will see a CSV included in that data file and you can use <code>readr::read_csv()</code>to read in the file.</p>
+<p>For example, for the <a href="https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries">Data Science Job Salaries dataset</a>, you can click <code>Download</code> and then upload the resulting zip file. Then you can read in the file like:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="datasets.html#cb6-1" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">&quot;ds_salaries.csv&quot;</span>)</span></code></pre></div>
 
+</div>
 </div>
 <hr>
 <center> 
@@ -201,8 +226,8 @@ Before following any of these instructions, make sure you have the tidyverse ins
           </div>
         </div>
       </div>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="datasets.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
