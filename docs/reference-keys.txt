@@ -2,4 +2,6 @@ open-source-datasets-and-databases-for-practicing-data-science
 datasets
 dslabs
 fivethiryeight-data
+open-case-studies
 kaggle
+tidytuesday

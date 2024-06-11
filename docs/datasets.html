@@ -139,7 +139,9 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="2.1" data-path="datasets.html"><a href="datasets.html#dslabs"><i class="fa fa-check"></i><b>2.1</b> dslabs</a></li>
 <li class="chapter" data-level="2.2" data-path="datasets.html"><a href="datasets.html#fivethiryeight-data"><i class="fa fa-check"></i><b>2.2</b> FiveThiryEight Data</a></li>
-<li class="chapter" data-level="2.3" data-path="datasets.html"><a href="datasets.html#kaggle"><i class="fa fa-check"></i><b>2.3</b> Kaggle</a></li>
+<li class="chapter" data-level="2.3" data-path="datasets.html"><a href="datasets.html#open-case-studies"><i class="fa fa-check"></i><b>2.3</b> Open Case Studies</a></li>
+<li class="chapter" data-level="2.4" data-path="datasets.html"><a href="datasets.html#kaggle"><i class="fa fa-check"></i><b>2.4</b> Kaggle</a></li>
+<li class="chapter" data-level="2.5" data-path="datasets.html"><a href="datasets.html#tidytuesday"><i class="fa fa-check"></i><b>2.5</b> TidyTuesday</a></li>
 </ul></li>
 <li class="divider"></li>
 <p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
@@ -202,14 +204,27 @@ For example, for the <code>airline-safety</code> dataset, the URL would look lik
 <p>Then you can use that URL in a read_csv function like this:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="datasets.html#cb5-1" aria-hidden="true" tabindex="-1"></a>airline_safety <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/fivethirtyeight/data/master/airline-safety/airline-safety.csv&quot;</span>)</span></code></pre></div>
 </div>
-<div id="kaggle" class="section level2" number="2.3">
-<h2><span class="header-section-number">2.3</span> Kaggle</h2>
+<div id="open-case-studies" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Open Case Studies</h2>
+<p>Open Case studies is a set of datasets and example tutorials of datasets that have to do with public health.</p>
+<p><a href="https://www.opencasestudies.org/#searchtab">You can find them here</a>.</p>
+<p>Click on “Static Version” in the table next to the dataset you are interested and you’ll see a full Rmd example of how to use these data!</p>
+</div>
+<div id="kaggle" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Kaggle</h2>
 <p><a href="https://www.kaggle.com/datasets">Kaggle</a> has a variety of datasets that are generally available as CSV.
 You’ll have to make a login before you download, but you can use a Google login.</p>
 <p>To download a dataset, you can browse them and then when you find one you like, you can download the CSV. It will download it in a zip file. Upload this to your RStudio server using the Upload button.</p>
 <p>Then you will see a CSV included in that data file and you can use <code>readr::read_csv()</code>to read in the file.</p>
 <p>For example, for the <a href="https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries">Data Science Job Salaries dataset</a>, you can click <code>Download</code> and then upload the resulting zip file. Then you can read in the file like:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="datasets.html#cb6-1" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">&quot;ds_salaries.csv&quot;</span>)</span></code></pre></div>
+</div>
+<div id="tidytuesday" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> TidyTuesday</h2>
+<p><a href="https://github.com/rfordatascience/tidytuesday/tree/master/data">TidyTuesday</a> is a community weekly dataset that is digested and talked about by the R community. This has been going on for years so you can pull from previous years datasets and see lots of examples from others about them.</p>
+<p>You can find a dataset and read it in directly like this (click on the folders and the files then click on the <code>raw</code> form of it in GitHub and copy that link.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="datasets.html#cb7-1" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-04-23/week4_australian_salary.csv&quot;</span>)</span></code></pre></div>
+<p>Or download it and put it in your Posit.Cloud project.</p>
 
 </div>
 </div>

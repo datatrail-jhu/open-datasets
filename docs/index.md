@@ -1,6 +1,6 @@
 ---
 title: " Open Source Datasets and Databases for Practicing Data Science "
-date: "August, 2022"
+date: "June, 2024"
 site: bookdown::bookdown_site
 documentclass: book
 biblio-style: apalike
