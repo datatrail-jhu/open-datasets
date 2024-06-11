@@ -39,7 +39,14 @@ Then you can use that URL in a read_csv function like this:
 ```r
 airline_safety <- readr::read_csv("https://raw.githubusercontent.com/fivethirtyeight/data/master/airline-safety/airline-safety.csv")
 ```
+## Open Case Studies 
 
+Open Case studies is a set of datasets and example tutorials of datasets that have to do with public health. 
+
+[You can find them here](https://www.opencasestudies.org/#searchtab). 
+
+Click on "Static Version" in the table next to the dataset you are interested and you'll see a full Rmd example of how to use these data! 
+                 
 ## Kaggle
 
 [Kaggle](https://www.kaggle.com/datasets) has a variety of datasets that are generally available as CSV.
@@ -53,3 +60,15 @@ For example, for the [Data Science Job Salaries dataset](https://www.kaggle.com/
 ```r
 readr::read_csv("ds_salaries.csv")
 ```
+
+## TidyTuesday 
+
+[TidyTuesday](https://github.com/rfordatascience/tidytuesday/tree/master/data) is a community weekly dataset that is digested and talked about by the R community. This has been going on for years so you can pull from previous years datasets and see lots of examples from others about them. 
+
+You can find a dataset and read it in directly like this (click on the folders and the files then click on the `raw` form of it in GitHub and copy that link.  
+
+```r
+readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-04-23/week4_australian_salary.csv")
+```
+
+Or download it and put it in your Posit.Cloud project. 
